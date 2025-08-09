@@ -1,0 +1,535 @@
+{% extends 'website/base.html' %}
+{% load static %}
+{% block content %}
+
+<section class="mt-20 container rounded-3xl relative  overflow-hidden">
+
+    <div class="absolute inset-0 -z-10">
+        <img src="../../static/website/media/vector-bg.png" class="size-full object-cover object-center" />
+    </div>
+
+    <div class="backdrop-blur-xl backdrop-brightness-75 pt-20 text-white px-2 md:px-0">
+        <div class="max-w-prose text-center mx-auto space-y-4">
+
+
+            <p class="text-xs md:text-base font-medium uppercase tracking-widest">
+                Welcome to JS Technova Institute
+            </p>
+
+            <p class="text-4xl md:text-5xl lg:text-6xl leading-14 font-bold">Knowledge is Power. We are your source.
+            </p>
+
+            <p class="text-pretty">
+                We
+                provide expert,
+                personalized
+                instruction to help students
+                master new skills and excel academically.
+                Master every subject, from anywhere.
+            </p>
+        </div>
+
+        <div class="space-x-4 mt-8 mb-12 text-center">
+            <button
+                class="inline-block cursor-pointer group rounded-3xl border border-white/40 bg-blue text-white px-5 py-3 font-medium transition-all hover:scale-105 duration-300"
+                id="boon_now_btn">
+                Book Your Demo Class
+
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                    stroke="currentColor" class="size-6 inline-block w-0 group-hover:w-6 transition-all duration-300">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3" />
+                </svg>
+
+            </button>
+
+            <a class="inline-block rounded px-5 py-3 font-medium group" href="#">
+                Contact Us
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                    stroke="currentColor" class="size-6 inline-block w-0 group-hover:w-6 transition-all duration-300">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3" />
+                </svg>
+            </a>
+        </div>
+        <div class="h-full max-h-[400px]">
+            <img src="../../static/website/media/tutor-vector.png" class="aspect-auto h-full mx-auto" />
+        </div>
+
+    </div>
+</section>
+
+
+<section class="container">
+
+    <div class="grid grid-cols-3 py-8 gap-4 max-w-6xl mx-auto justify-items-center">
+
+        <div class="inline-flex items-center gap-4">
+            <div class="w-16 aspect-square">
+                <img src="../../static/website/media/icse.png" class="h-full w-full object-contain " />
+            </div>
+            <div class="hidden md:block">
+                <h3 class="font-medium text-lg">ICSE</h3>
+                <p class="text-sm">Class 1<sup>st</sup> - 10+</p>
+            </div>
+        </div>
+
+        <div class="inline-flex items-center gap-4">
+            <div class="w-16 aspect-square">
+                <img src="../../static/website/media/cbse board.png" class="h-full w-full object-contain" />
+            </div>
+            <div class="hidden md:block">
+                <h3 class="font-medium text-lg">CBSE</h3>
+                <p class="text-sm">Class 1<sup>st</sup> - 10+</p>
+            </div>
+        </div>
+
+
+        <div class="inline-flex items-center gap-4">
+            <div class="w-16 aspect-square">
+                <img src="../../static/website/media/up board.png" class="h-full w-full object-contain" />
+            </div>
+            <div class="hidden md:block">
+                <h3 class="font-medium text-lg">UP BOARD
+                </h3>
+                <p class="text-sm">Class 1<sup>st</sup> - 10+</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="mt-12">
+        <div class="max-w-prose mx-auto text-center">
+            <h1 class="text-2xl text-vivid-blue font-bold mb-2 uppercase ">Discover The Benefits ✨</h1>
+            <p class="text-xl text-pretty">We provide a premium online tutoring experience
+                designed
+                specifically
+                for
+                children, helping them
+                build confidence and master new skills from the comfort of your own home.
+            </p>
+        </div>
+
+        <div class="mt-8 space-y-12">
+
+            <div class="flex items-center flex-col md:flex-row gap-20 p-8 rounded-lg  max-w-6xl mx-auto">
+                <div class="rounded-lg overflow-hidden shrink-0">
+                    <img src="../../static/website/media/tutor-vector.png" alt="Description of the image"
+                        class="h-1/2 aspect-[5/4]">
+                </div>
+                <div class="">
+                    <div class="flex items-center space-x-4">
+                        <div
+                            class="size-10 bg-blue rounded-full flex items-center justify-center text-white text-lg font-bold">
+                            01
+                        </div>
+                        <h3 class="text-2xl font-bold text-blue leading-tight">
+                            Personalized Learning, Just for Them
+                        </h3>
+                    </div>
+
+                    <p class="mt-4 text-base leading-relaxed">
+                        We know every child is unique. Our expert tutors take the time to understand your child's
+                        individual learning style and
+                        pace. We create a customized learning plan that focuses on their specific needs, whether
+                        they need to catch up, get
+                        ahead, or simply want to explore a new subject. With our one-on-one sessions, your child
+                        gets the undivided attention
+                        they deserve, ensuring they grasp every concept thoroughly.
+                    </p>
+                </div>
+            </div>
+
+            <div class="flex flex-col md:flex-row-reverse items-center gap-20 p-8 rounded-lg  max-w-6xl mx-auto">
+                <div class="rounded-lg overflow-hidden shrink-0">
+                    <img src="../../static/website/media/tutor-vector.png" alt="Description of the image"
+                        class="h-1/2 aspect-[5/4]">
+                </div>
+                <div class="">
+                    <div class="flex items-center space-x-4">
+                        <div
+                            class="size-10 bg-blue rounded-full flex items-center justify-center text-white text-lg font-bold">
+                            02
+                        </div>
+                        <h3 class="text-2xl font-bold text-blue leading-tight">
+                            Flexible Scheduling to Fit Your Family's Life
+                        </h3>
+                    </div>
+
+                    <p class="mt-4 text-base leading-relaxed">
+                        Juggling family schedules can be tough. That's why SkillUp Academy offers complete
+                        flexibility. Say goodbye to rushed
+                        after-school commutes! Our sessions are available at times that work for you, including
+                        evenings and weekends. With just
+                        a few clicks, you can book a lesson that fits seamlessly into your family's routine.
+                    </p>
+                </div>
+            </div>
+
+            <div class="flex items-center flex-col md:flex-row gap-20 p-8 rounded-lg  max-w-6xl mx-auto">
+                <div class="rounded-lg overflow-hidden shrink-0">
+                    <img src="../../static/website/media/tutor-vector.png" alt="Description of the image"
+                        class="h-1/2 aspect-[5/4]">
+                </div>
+                <div class="">
+                    <div class="flex items-center space-x-4">
+                        <div
+                            class="size-10 bg-blue rounded-full flex items-center justify-center text-white text-lg font-bold">
+                            03
+                        </div>
+                        <h3 class="text-2xl font-bold text-blue leading-tight">
+                            The Best Tutors, Anywhere You Are
+                        </h3>
+                    </div>
+
+                    <p class="mt-4 text-base leading-relaxed">
+                        We believe that a great education knows no boundaries. SkillUp Academy connects your child
+                        with highly-qualified and
+                        passionate tutors from across the country. Our tutors are not just subject matter experts;
+                        they are trained educators
+                        who know how to make learning engaging and enjoyable for children. You can find the perfect
+                        tutor for your child,
+                        regardless of your location.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+
+    <div class="mt-12">
+        <div class="max-w-prose mx-auto text-center">
+            <h1 class="text-xl mb-2 uppercase font-medium">Our tutors </h1>
+            <p class="text-2xl text-vivid-blue text-pretty font-bold">Our Team of Certified Tutors
+            </p>
+        </div>
+
+        <div class="swiper mySwiper max-w-6xl rounded-3xl mt-8">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div class="group/tutors relative block bg-black aspect-[4/5] rounded-xl overflow-hidden w-96">
+                        <img alt="" src="../../static/website/media/VIVEK PHOTO.jpg"
+                            class="h-full w-full object-cover object-top" />
+
+                        <div
+                            class="absolute bottom-2 left-2 right-2 p-4 rounded-lg backdrop-blur-3xl saturate-200 bg-white/5 border border-white/20 shadow">
+                            <p
+                                class="text-xs absolute -top-2.5 tracking-widest text-white py-0.5 px-1 bg-azure inline-block rounded-md uppercase">
+                                Mathematics</p>
+                            <p class="text-lg font-bold tracking-wider uppercase">Shubham Chauhan
+                            </p>
+                            <p class="h-0 overflow-hidden group-hover/tutors:h-32 transition-all ease-out duration-300">
+                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tenetur distinctio
+                                provident nobis
+                                in sint saepe inventore velit quos veniam ducimus.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<div class="mt-20 relative container rounded-3xl overflow-hidden">
+    <div class="absolute inset-0 -z-10">
+        <img src="../../static/website/media/blue-gradient.png" class="size-full object-cover object-center" />
+    </div>
+
+    <div class="py-8 md:py-20 px-4 max-w-6xl mx-auto backdrop-blur">
+        <div class="">
+            <h1 class="text-2xl font-bold text-vivid-blue mb-2">Student Feedbacks ❤️</h1>
+            <p class="text-xl  text-pretty max-w-prose">
+                Hear directly from our students! Their feedback is the heart of what we do. We're proud to share
+                their
+                stories of
+                success, newfound confidence, and love for learning.</p>
+        </div>
+
+        <div class="mt-12">
+            <div class="feedbacks">
+                <div class="flex flex-col md:flex-row gap-8 md:gap-12 lg:gap-20 items-center">
+                    <img src="https://images.unsplash.com/photo-1603871165848-0aa92c869fa1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=900&q=80"
+                        class="h-72 lg:h-96 aspect-[5/4] rounded-3xl object-cover object-top" />
+
+                    <div class="">
+                        <p class="text-5xl opacity-50 leading-5">″</p>
+                        <p class="max-w-prose font-medium relative feedback-para text-pretty">Lorem ipsum dolor sit
+                            amet,
+                            consectetur
+                            adipisicing
+                            elit.
+                            Architecto,
+                            mollitia
+                            fuga quas
+                            tempore beatae dicta corrupti possimus assumenda veniam perferendis!</p>
+                        <p class="text-5xl text-right opacity-50">″</p>
+                        <h1 class="text-2xl font-bold">Shubham chauhan</h1>
+                        <p>Ind</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex justify-end gap-4">
+                <button class="text-4xl cursor-pointer">⬅️</button>
+                <button class="text-4xl cursor-pointer">➡️</button>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+<div
+    class="max-w-6xl mx-auto bg-gradient-to-t from-vivid-blue/50 via-blue/50 to-azure/10 grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-20 rounded-3xl mt-12 p-8 lg:p-20">
+
+    <div>
+        <h1 class="text-2xl font-bold text-vivid-blue mb-2 max-w-prose text-pretty">
+            Join JS Technova Institute in just <br /><strong class="text-6xl inline-block">3</strong> easy steps!
+        </h1>
+
+        <div class="mt-12 space-y-4">
+            <div
+                class="group/join-steps bg-white rounded-b-lg border-t-2 transition-colors duration-300 hover:border-azure p-4 flex flex-col justify-around shadow-lg">
+                <p class="text-lg font-bold font-sans group-hover/join-steps:text-azure transition-colors duration-300">
+                    Secure Your Free Demo
+                    Session</p>
+                <div class="py-3">
+                    <p class="text-sm">
+                        Start your journey to mathematical mastery with a single click. Simply click the "Book Free
+                        Demo Now" button to choose a
+                        time that fits your schedule. Our user-friendly booking process is quick and hassle-free,
+                        ensuring you can get started
+                        in no time.
+                    </p>
+                </div>
+
+            </div>
+
+
+            <div
+                class="group/join-steps bg-white rounded-b-lg border-t-2 transition-colors duration-300 hover:border-azure p-4 flex flex-col justify-around shadow-lg">
+                <p class="text-lg font-bold font-sans group-hover/join-steps:text-azure transition-colors duration-300">
+                    Experience the Magic!!</p>
+                <div class="py-3">
+                    <p class="text-sm">
+                        Step into our virtual classroom and get a taste of what makes Bhanzu so special. In this fun
+                        and interactive demo, your
+                        child will meet one of our amazing teachers and experience our unique teaching style
+                        firsthand. It's a chance to engage
+                        with a new way of learning that makes complex concepts simple and exciting.
+                    </p>
+                </div>
+
+            </div>
+
+            <div
+                class="group/join-steps bg-white rounded-b-lg border-t-2 transition-colors duration-300 hover:border-azure p-4 flex flex-col justify-around shadow-lg">
+                <p class="text-lg font-bold font-sans group-hover/join-steps:text-azure transition-colors duration-300">
+                    Begin Your Learning Adventure</p>
+                <div class="py-3">
+                    <p class="text-sm">
+                        Once you've experienced the magic, our dedicated academic counselor will reach out to you.
+                        They will personally assist
+                        you in selecting the perfect batch for your child's age and skill level. With all the
+                        details sorted, your child is
+                        ready to embark on an incredible learning adventure with JS Technova Institute.
+
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+    <div class="rounded-3xl overflow-hidden drop-shadow-xl hidden md:block">
+        <img src="../../static/website/media/bg.jpg" class="h-full object-cover object-center" />
+    </div>
+
+    <div
+        class="bg-radial from-blue to-azure shadow-lg  md:col-span-2 p-4 rounded-3xl text-white flex items-center justify-between">
+        <h2 class="text-2xl md:text-4xl font-black">🚀 Join Now</h2>
+        <button id="boon_now_btn"
+            class="group rounded-2xl cursor-pointer bg-white border border-white/40 text-blue font-semibold px-4 md:px-5 py-3">
+            Book Your Demo Class
+
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                stroke="currentColor" class="size-6 inline-block w-0 group-hover:w-6 transition-all duration-300">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3" />
+            </svg>
+
+        </button>
+    </div>
+
+</div>
+
+
+<div class="max-w-6xl mx-auto my-20 grid grid-cols-1 md:grid-cols-2">
+
+
+    <div class="space-y-4 p-8 flex flex-wrap gap-8 md:block">
+        <div class="flex items-start space-x-4">
+            <span class="text-2xl">📌</span>
+            <div>
+                <h4 class="font-semibold text-lg">Address</h4>
+                <p class="text-sm mt-1">
+                    JS TechnoVa Institute<br>
+                    123 Main Street<br>
+                    City, State 12345
+                </p>
+            </div>
+        </div>
+
+        <div class="flex items-start space-x-4">
+            <span class="text-2xl">📞</span>
+            <div>
+                <h4 class="font-semibold text-lg">Phone</h4>
+                <p class="text-sm mt-1">
+                    +1 (123) 456-7890<br>
+                    Mon-Fri, 9am-5pm
+                </p>
+            </div>
+        </div>
+
+        <div class="flex items-start space-x-4">
+            <span class="text-2xl">📩</span>
+            <div>
+                <h4 class="font-semibold text-lg">Email</h4>
+                <div class="text-sm mt-1">
+                    info@jstechnova.com<br>
+                    support@jstechnova.com
+                </div>
+            </div>
+        </div>
+
+        <div class="flex items-start space-x-4">
+            <span class="text-2xl">🔗</span>
+            <div>
+                <h4 class="font-semibold text-lg">Social Media</h4>
+                <ul class="mt-1 flex items-center gap-2">
+                    <li>
+                        <a>
+                            <svg class="size-8" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                                <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round">
+                                </g>
+                                <g id="SVGRepo_iconCarrier">
+                                    <rect x="2" y="2" width="28" height="28" rx="6" fill="url(#paint0_radial_87_7153)">
+                                    </rect>
+                                    <rect x="2" y="2" width="28" height="28" rx="6" fill="url(#paint1_radial_87_7153)">
+                                    </rect>
+                                    <rect x="2" y="2" width="28" height="28" rx="6" fill="url(#paint2_radial_87_7153)">
+                                    </rect>
+                                    <path
+                                        d="M23 10.5C23 11.3284 22.3284 12 21.5 12C20.6716 12 20 11.3284 20 10.5C20 9.67157 20.6716 9 21.5 9C22.3284 9 23 9.67157 23 10.5Z"
+                                        fill="white"></path>
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M16 21C18.7614 21 21 18.7614 21 16C21 13.2386 18.7614 11 16 11C13.2386 11 11 13.2386 11 16C11 18.7614 13.2386 21 16 21ZM16 19C17.6569 19 19 17.6569 19 16C19 14.3431 17.6569 13 16 13C14.3431 13 13 14.3431 13 16C13 17.6569 14.3431 19 16 19Z"
+                                        fill="white"></path>
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M6 15.6C6 12.2397 6 10.5595 6.65396 9.27606C7.2292 8.14708 8.14708 7.2292 9.27606 6.65396C10.5595 6 12.2397 6 15.6 6H16.4C19.7603 6 21.4405 6 22.7239 6.65396C23.8529 7.2292 24.7708 8.14708 25.346 9.27606C26 10.5595 26 12.2397 26 15.6V16.4C26 19.7603 26 21.4405 25.346 22.7239C24.7708 23.8529 23.8529 24.7708 22.7239 25.346C21.4405 26 19.7603 26 16.4 26H15.6C12.2397 26 10.5595 26 9.27606 25.346C8.14708 24.7708 7.2292 23.8529 6.65396 22.7239C6 21.4405 6 19.7603 6 16.4V15.6ZM15.6 8H16.4C18.1132 8 19.2777 8.00156 20.1779 8.0751C21.0548 8.14674 21.5032 8.27659 21.816 8.43597C22.5686 8.81947 23.1805 9.43139 23.564 10.184C23.7234 10.4968 23.8533 10.9452 23.9249 11.8221C23.9984 12.7223 24 13.8868 24 15.6V16.4C24 18.1132 23.9984 19.2777 23.9249 20.1779C23.8533 21.0548 23.7234 21.5032 23.564 21.816C23.1805 22.5686 22.5686 23.1805 21.816 23.564C21.5032 23.7234 21.0548 23.8533 20.1779 23.9249C19.2777 23.9984 18.1132 24 16.4 24H15.6C13.8868 24 12.7223 23.9984 11.8221 23.9249C10.9452 23.8533 10.4968 23.7234 10.184 23.564C9.43139 23.1805 8.81947 22.5686 8.43597 21.816C8.27659 21.5032 8.14674 21.0548 8.0751 20.1779C8.00156 19.2777 8 18.1132 8 16.4V15.6C8 13.8868 8.00156 12.7223 8.0751 11.8221C8.14674 10.9452 8.27659 10.4968 8.43597 10.184C8.81947 9.43139 9.43139 8.81947 10.184 8.43597C10.4968 8.27659 10.9452 8.14674 11.8221 8.0751C12.7223 8.00156 13.8868 8 15.6 8Z"
+                                        fill="white"></path>
+                                    <defs>
+                                        <radialGradient id="paint0_radial_87_7153" cx="0" cy="0" r="1"
+                                            gradientUnits="userSpaceOnUse"
+                                            gradientTransform="translate(12 23) rotate(-55.3758) scale(25.5196)">
+                                            <stop stop-color="#B13589"></stop>
+                                            <stop offset="0.79309" stop-color="#C62F94"></stop>
+                                            <stop offset="1" stop-color="#8A3AC8"></stop>
+                                        </radialGradient>
+                                        <radialGradient id="paint1_radial_87_7153" cx="0" cy="0" r="1"
+                                            gradientUnits="userSpaceOnUse"
+                                            gradientTransform="translate(11 31) rotate(-65.1363) scale(22.5942)">
+                                            <stop stop-color="#E0E8B7"></stop>
+                                            <stop offset="0.444662" stop-color="#FB8A2E"></stop>
+                                            <stop offset="0.71474" stop-color="#E2425C"></stop>
+                                            <stop offset="1" stop-color="#E2425C" stop-opacity="0"></stop>
+                                        </radialGradient>
+                                        <radialGradient id="paint2_radial_87_7153" cx="0" cy="0" r="1"
+                                            gradientUnits="userSpaceOnUse"
+                                            gradientTransform="translate(0.500002 3) rotate(-8.1301) scale(38.8909 8.31836)">
+                                            <stop offset="0.156701" stop-color="#406ADC"></stop>
+                                            <stop offset="0.467799" stop-color="#6A45BE"></stop>
+                                            <stop offset="1" stop-color="#6A45BE" stop-opacity="0"></stop>
+                                        </radialGradient>
+                                    </defs>
+                                </g>
+                            </svg>
+                        </a>
+                    </li>
+                    <li>
+                        <svg class="size-8" viewBox="0 -7 48 48" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                            xmlns:xlink="http://www.w3.org/1999/xlink" fill="#000000">
+                            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                            <g id="SVGRepo_iconCarrier">
+                                <title>Youtube-color</title>
+                                <desc>Created with Sketch.</desc>
+                                <defs> </defs>
+                                <g id="Icons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                    <g id="Color-" transform="translate(-200.000000, -368.000000)" fill="#CE1312">
+                                        <path
+                                            d="M219.044,391.269916 L219.0425,377.687742 L232.0115,384.502244 L219.044,391.269916 Z M247.52,375.334163 C247.52,375.334163 247.0505,372.003199 245.612,370.536366 C243.7865,368.610299 241.7405,368.601235 240.803,368.489448 C234.086,368 224.0105,368 224.0105,368 L223.9895,368 C223.9895,368 213.914,368 207.197,368.489448 C206.258,368.601235 204.2135,368.610299 202.3865,370.536366 C200.948,372.003199 200.48,375.334163 200.48,375.334163 C200.48,375.334163 200,379.246723 200,383.157773 L200,386.82561 C200,390.73817 200.48,394.64922 200.48,394.64922 C200.48,394.64922 200.948,397.980184 202.3865,399.447016 C204.2135,401.373084 206.612,401.312658 207.68,401.513574 C211.52,401.885191 224,402 224,402 C224,402 234.086,401.984894 240.803,401.495446 C241.7405,401.382148 243.7865,401.373084 245.612,399.447016 C247.0505,397.980184 247.52,394.64922 247.52,394.64922 C247.52,394.64922 248,390.73817 248,386.82561 L248,383.157773 C248,379.246723 247.52,375.334163 247.52,375.334163 L247.52,375.334163 Z"
+                                            id="Youtube"> </path>
+                                    </g>
+                                </g>
+                            </g>
+                        </svg>
+                    </li>
+                    <li>
+
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Right side: Contact form -->
+    <div class="bg-vivid-blue/5 rounded-3xl p-8 order-first md:order-last">
+
+        <div class="">
+            <h1 class="text-x mb-2 uppercase font-medium">Get in touch</h1>
+            <p class="text-2xl text-vivid-blue font-bold">Request For a Callback ☎️
+            </p>
+        </div>
+
+        <form action="#" method="POST" class="space-y-2 mt-4">
+            <label class="block" for="name">
+                <span>Name</span>
+                <input type="text" id="name" name="name" class="input" placeholder="Enter your name" />
+            </label>
+
+            <label class="block" for="email">
+                <span>Email</span>
+                <input type="email" id="email" name="email" class="input" placeholder="Enter your email" />
+            </label>
+
+            <label class="block" for="phone">
+                <span>Phone</span>
+                <input type="text" id="phone" name="phone" class="input" placeholder="Enter your phone no." />
+            </label>
+
+            <label class="block" for="message">
+                <span>Message</span>
+                <textarea cols="4" class="input"></textarea>
+            </label>
+
+            <button class="group rounded-3xl bg-blue text-white px-8 py-3 font-medium cursor-pointer" href="#">
+                Send
+
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                    stroke="currentColor" class="size-6 inline-block w-0 group-hover:w-6 transition-all duration-200">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3" />
+                </svg>
+
+            </button>
+
+        </form>
+    </div>
+</div>
+
+
+{% endblock %}

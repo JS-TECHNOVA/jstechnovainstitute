@@ -1,0 +1,90 @@
+{% load static %}
+<header id="header"
+    class="transition  duration-700 ease-in-out container fixed left-0 right-0 top-2 bg-white max-w-6xl rounded-xl z-[999]">
+    <div class="flex h-16 items-center justify-between gap-8 px-4">
+        <a class="inline-flex items-center gap-x-2 shrink-0" href="#">
+            <img src="{% static 'website/media/icon-small.png' %}" class="w-10" />
+            <span class="text-base leading-4 font-bold">Technova <br />Institute</span>
+        </a>
+
+        <div class="md:flex items-center hidden">
+            <nav aria-label="Global" class="">
+                <ul class="flex items-center text-sm relative">
+                    <span class="nav-span transition-all duration-400 ease-out"></span>
+                    <li>
+                        <a class="font-medium nav-links px-2 active-nav" href="#"> Home </a>
+                    </li>
+
+                    <li>
+                        <a class="font-medium nav-links px-2" href="#"> About </a>
+                    </li>
+
+                    <li>
+                        <a class="font-medium nav-links px-2" href="#"> Tutors </a>
+                    </li>
+
+                    <li>
+                        <a class="font-medium nav-links px-2" href="#"> Courses </a>
+                    </li>
+
+                    <li>
+                        <a class="font-medium nav-links px-2" href="#"> Contact </a>
+                    </li>
+
+                    <li>
+                        <a class="font-medium nav-links px-2" href="#"> Blogs </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+
+        <div class="flex items-center gap-x-4">
+            <button id="boon_now_btn" class="group cursor-pointer rounded-xl bg-blue text-white font-medium px-4 py-2">
+                Book Your Demo Class
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                    stroke="currentColor" class="size-6 inline-block w-0 group-hover:w-6 transition-all duration-300">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3" />
+                </svg>
+            </button>
+
+            <button class="cursor-pointer rounded-xl font-black px-4 py-2  md:hidden">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+                    stroke="currentColor" class="size-6">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                </svg>
+            </button>
+        </div>
+
+    </div>
+
+    <div class="fixed inset-0 z-[9999] bg-black/50 flex justify-end w-0 overflow-hidden">
+        <nav aria-label="Global" class="bg-white flex h-full p-8 rounded-l-3xl">
+            <ul class="flex items-end gap-y-2 flex-col text-lg relative">
+                <li>
+                    <a class="font-medium  px-2" href="#"> Home </a>
+                </li>
+
+                <li>
+                    <a class="font-medium  px-2" href="#"> About </a>
+                </li>
+
+                <li>
+                    <a class="font-medium  px-2" href="#"> Tutors </a>
+                </li>
+
+                <li>
+                    <a class="font-medium  px-2" href="#"> Courses </a>
+                </li>
+
+                <li>
+                    <a class="font-medium  px-2" href="#"> Contact </a>
+                </li>
+
+                <li>
+                    <a class="font-medium  px-2" href="#"> Blogs </a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</header>
