@@ -3,7 +3,8 @@ from datetime import datetime
 
 
 def upload_tutor_iamge(instance, filename):
-    return f"tutors/{datetime.now().strftime("%Y")}/{filename}"
+    year = datetime.now().strftime("%Y")
+    return f"tutors/{year}/{filename}"
 # Create your models here.
 class Tutors(models.Model):
     name = models.CharField(max_length=100)
@@ -22,7 +23,8 @@ class Tutors(models.Model):
    
 
 def upload_student_feedback(instance, filename):
-    return f'student_feedback/{datetime.now().strftime("%Y")}/{instance.country}/{filename}'
+    year = datetime.now().strftime("%Y")
+    return f'student_feedback/{year}/{instance.country}/{filename}'
 
 class StudentFeedbacks(models.Model):
     name = models.CharField(max_length=100)
