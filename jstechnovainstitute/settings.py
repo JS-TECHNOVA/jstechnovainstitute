@@ -18,13 +18,14 @@ ALLOWED_HOSTS = ["*"] if DEBUG else ["www.institute.jstechnova.in", "institute.j
 # Application definition
 
 INSTALLED_APPS = [
+    'django_database_prefix',    
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'website',
+    'institute',
 ]
 
 MIDDLEWARE = [
@@ -72,6 +73,8 @@ DATABASES = {
         },
     }
 }
+
+DB_PREFIX = "jstechnova_institute_"
 
 # Password validation
 # https://docs.djangoproject.com/en/5.1/ref/settings/#auth-password-validators
