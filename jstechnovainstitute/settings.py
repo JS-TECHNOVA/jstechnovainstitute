@@ -110,11 +110,11 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.1/howto/static-files/
 
-STATIC_URL = 'institute/static/'
-STATIC_ROOT = "/home/azhm1wt0yj3c/public_html/institute/static"
+STATIC_URL = 'static/'
+STATIC_ROOT = "/home/azhm1wt0yj3c/public_html/institute.jstechnova.in/static"
 
 MEDIA_URL = 'media/'
-MEDIA_ROOT = "/home/azhm1wt0yj3c/public_html/institute/media"
+MEDIA_ROOT = "/home/azhm1wt0yj3c/public_html/institute.jstechnova.in/media"
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
 
