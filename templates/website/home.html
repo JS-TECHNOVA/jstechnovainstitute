@@ -2,15 +2,14 @@
 {% load static %}
 {% block content %}
 
-<section class="mt-20 container rounded-3xl relative  overflow-hidden">
+<div class="mt-20 container rounded-3xl relative  overflow-hidden">
 
     <div class="absolute inset-0 -z-10">
-        <img src="../../static/website/media/vector-bg.png" class="size-full object-cover object-center" />
+        <img src="{% static 'website/media/vector-bg.png' %}" class="size-full object-cover object-center" />
     </div>
 
-    <div class="backdrop-blur-xl backdrop-brightness-75 pt-20 text-white px-2 md:px-0">
+    <div class="backdrop-blur-xl backdrop-brightness-75 pt-10 md:pt-20 text-white px-2 md:px-0">
         <div class="max-w-prose text-center mx-auto space-y-4">
-
 
             <p class="text-xs md:text-base font-medium uppercase tracking-widest">
                 Welcome to JS Technova Institute
@@ -29,12 +28,11 @@
             </p>
         </div>
 
-        <div class="space-x-4 mt-8 mb-12 text-center">
+        <div class="space-x-4 mt-8 mb-12 text-center text-sm md:text-base">
             <button
-                class="inline-block cursor-pointer group rounded-3xl border border-white/40 bg-blue text-white px-5 py-3 font-medium transition-all hover:scale-105 duration-300"
+                class="inline-block cursor-pointer group rounded-3xl border border-white/40 bg-blue text-white px-3 sm:px-5 py-3 font-medium transition-all hover:scale-105 duration-300"
                 id="boon_now_btn">
                 Book Your Demo Class
-
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                     stroke="currentColor" class="size-6 inline-block w-0 group-hover:w-6 transition-all duration-300">
                     <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3" />
@@ -55,12 +53,12 @@
         </div>
 
     </div>
-</section>
+</div>
 
 
-<section class="container">
+<div class="container">
 
-    <div class="grid grid-cols-3 py-8 gap-4 max-w-6xl mx-auto justify-items-center">
+    <div class="grid grid-cols-3 py-12 gap-4 max-w-6xl mx-auto justify-items-center">
 
         <div class="inline-flex items-center gap-4">
             <div class="w-16 aspect-square">
@@ -95,10 +93,10 @@
         </div>
     </div>
 
-    <div class="mt-12">
-        <div class="max-w-prose mx-auto text-center">
-            <h1 class="text-2xl text-vivid-blue font-bold mb-2 uppercase ">Discover The Benefits ✨</h1>
-            <p class="text-xl text-pretty">We provide a premium online tutoring experience
+    <div class="">
+        <div class="heading-container">
+            <h1 class="heading">Discover The Benefits ✨</h1>
+            <p class="heading-content">We provide a premium online tutoring experience
                 designed
                 specifically
                 for
@@ -107,20 +105,20 @@
             </p>
         </div>
 
-        <div class="mt-8 space-y-12">
+        <div class="mt-8 space-y-4 md:space-y-12">
 
-            <div class="flex items-center flex-col md:flex-row gap-20 p-8 rounded-lg  max-w-6xl mx-auto">
+            <div class="flex items-center flex-col md:flex-row gap-8 xl:gap-20 p-8 rounded-lg  max-w-6xl mx-auto">
                 <div class="rounded-lg overflow-hidden shrink-0">
-                    <img src="../../static/website/media/tutor-vector.png" alt="Description of the image"
+                    <img src="{% static 'website/media/tutor-vector.png' %}" alt="Description of the image"
                         class="h-1/2 aspect-[5/4]">
                 </div>
                 <div class="">
-                    <div class="flex items-center space-x-4">
+                    <div class="flex items-start space-x-4">
                         <div
-                            class="size-10 bg-blue rounded-full flex items-center justify-center text-white text-lg font-bold">
+                            class="size-10 shrink-0 bg-blue rounded-full flex items-center justify-center text-white text-lg font-bold">
                             01
                         </div>
-                        <h3 class="text-2xl font-bold text-blue leading-tight">
+                        <h3 class="sub-heading">
                             Personalized Learning, Just for Them
                         </h3>
                     </div>
@@ -137,18 +135,19 @@
                 </div>
             </div>
 
-            <div class="flex flex-col md:flex-row-reverse items-center gap-20 p-8 rounded-lg  max-w-6xl mx-auto">
+            <div
+                class="flex flex-col md:flex-row-reverse items-center gap-8 xl:gap-20 p-8 rounded-lg  max-w-6xl mx-auto">
                 <div class="rounded-lg overflow-hidden shrink-0">
-                    <img src="../../static/website/media/tutor-vector.png" alt="Description of the image"
+                    <img src="{% static 'website/media/tutor-vector.png' %}" alt="Description of the image"
                         class="h-1/2 aspect-[5/4]">
                 </div>
                 <div class="">
                     <div class="flex items-center space-x-4">
                         <div
-                            class="size-10 bg-blue rounded-full flex items-center justify-center text-white text-lg font-bold">
+                            class="size-10 bg-blue rounded-full shrink-0 flex items-center justify-center text-white text-lg font-bold">
                             02
                         </div>
-                        <h3 class="text-2xl font-bold text-blue leading-tight">
+                        <h3 class="sub-heading">
                             Flexible Scheduling to Fit Your Family's Life
                         </h3>
                     </div>
@@ -163,18 +162,18 @@
                 </div>
             </div>
 
-            <div class="flex items-center flex-col md:flex-row gap-20 p-8 rounded-lg  max-w-6xl mx-auto">
+            <div class="flex items-center flex-col md:flex-row gap-8 xl:gap-20 p-8 rounded-lg  max-w-6xl mx-auto">
                 <div class="rounded-lg overflow-hidden shrink-0">
-                    <img src="../../static/website/media/tutor-vector.png" alt="Description of the image"
+                    <img src="{% static 'website/media/tutor-vector.png' %}" alt="Description of the image"
                         class="h-1/2 aspect-[5/4]">
                 </div>
                 <div class="">
                     <div class="flex items-center space-x-4">
                         <div
-                            class="size-10 bg-blue rounded-full flex items-center justify-center text-white text-lg font-bold">
+                            class="size-10 bg-blue shrink-0 rounded-full flex items-center justify-center text-white text-lg font-bold">
                             03
                         </div>
-                        <h3 class="text-2xl font-bold text-blue leading-tight">
+                        <h3 class="sub-heading">
                             The Best Tutors, Anywhere You Are
                         </h3>
                     </div>
@@ -197,39 +196,23 @@
 
 
     <div class="mt-12">
-        <div class="max-w-prose mx-auto text-center">
-            <h1 class="text-xl mb-2 uppercase font-medium">Our tutors </h1>
-            <p class="text-2xl text-vivid-blue text-pretty font-bold">Our Team of Certified Tutors
+        <div class="heading-container">
+            <h1 class="heading">Our tutors </h1>
+            <p class="heading-content">Our Team of Certified Tutors
             </p>
         </div>
 
         <div class="swiper mySwiper max-w-6xl rounded-3xl mt-8">
             <div class="swiper-wrapper">
+                {% for tutor in tutors %}
                 <div class="swiper-slide">
-                    <div class="group/tutors relative block bg-black aspect-[4/5] rounded-xl overflow-hidden w-96">
-                        <img alt="" src="../../static/website/media/VIVEK PHOTO.jpg"
-                            class="h-full w-full object-cover object-top" />
-
-                        <div
-                            class="absolute bottom-2 left-2 right-2 p-4 rounded-lg backdrop-blur-3xl saturate-200 bg-white/5 border border-white/20 shadow">
-                            <p
-                                class="text-xs absolute -top-2.5 tracking-widest text-white py-0.5 px-1 bg-azure inline-block rounded-md uppercase">
-                                Mathematics</p>
-                            <p class="text-lg font-bold tracking-wider uppercase">Shubham Chauhan
-                            </p>
-                            <p class="h-0 overflow-hidden group-hover/tutors:h-32 transition-all ease-out duration-300">
-                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tenetur distinctio
-                                provident nobis
-                                in sint saepe inventore velit quos veniam ducimus.
-                            </p>
-                        </div>
-                    </div>
+                    {% include 'website/components/our_tutors_card.html' %}
                 </div>
-
+                {% endfor %}
             </div>
         </div>
     </div>
-</section>
+</div>
 
 
 <div class="mt-20 relative container rounded-3xl overflow-hidden">
@@ -238,9 +221,9 @@
     </div>
 
     <div class="py-8 md:py-20 px-4 max-w-6xl mx-auto backdrop-blur">
-        <div class="">
-            <h1 class="text-2xl font-bold text-vivid-blue mb-2">Student Feedbacks ❤️</h1>
-            <p class="text-xl  text-pretty max-w-prose">
+        <div class="heading-container">
+            <h1 class="heading">Student Feedbacks ❤️</h1>
+            <p class="heading-content">
                 Hear directly from our students! Their feedback is the heart of what we do. We're proud to share
                 their
                 stories of
@@ -249,31 +232,14 @@
 
         <div class="mt-12">
             <div class="feedbacks">
-                <div class="flex flex-col md:flex-row gap-8 md:gap-12 lg:gap-20 items-center">
-                    <img src="https://images.unsplash.com/photo-1603871165848-0aa92c869fa1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=900&q=80"
-                        class="h-72 lg:h-96 aspect-[5/4] rounded-3xl object-cover object-top" />
-
-                    <div class="">
-                        <p class="text-5xl opacity-50 leading-5">″</p>
-                        <p class="max-w-prose font-medium relative feedback-para text-pretty">Lorem ipsum dolor sit
-                            amet,
-                            consectetur
-                            adipisicing
-                            elit.
-                            Architecto,
-                            mollitia
-                            fuga quas
-                            tempore beatae dicta corrupti possimus assumenda veniam perferendis!</p>
-                        <p class="text-5xl text-right opacity-50">″</p>
-                        <h1 class="text-2xl font-bold">Shubham chauhan</h1>
-                        <p>Ind</p>
-                    </div>
-                </div>
+                {% for feedback in st_feedbacks %}
+                {% include 'website/components/st_feedback.html' %}
+                {% endfor %}
             </div>
 
-            <div class="flex justify-end gap-4">
-                <button class="text-4xl cursor-pointer">⬅️</button>
-                <button class="text-4xl cursor-pointer">➡️</button>
+            <div class="flex justify-end gap-4 mt-8">
+                <button id="prev_feedback_btn" class="text-4xl cursor-pointer">⬅️</button>
+                <button id="next_feedback_btn" class="text-4xl cursor-pointer">➡️</button>
             </div>
         </div>
 
@@ -338,9 +304,7 @@
 
                     </p>
                 </div>
-
             </div>
-
         </div>
     </div>
 
@@ -349,7 +313,7 @@
     </div>
 
     <div
-        class="bg-radial from-blue to-azure shadow-lg  md:col-span-2 p-4 rounded-3xl text-white flex items-center justify-between">
+        class="bg-radial from-blue to-azure shadow-lg  md:col-span-2 p-4 rounded-3xl text-white flex flex-wrap items-center justify-between">
         <h2 class="text-2xl md:text-4xl font-black">🚀 Join Now</h2>
         <button id="boon_now_btn"
             class="group rounded-2xl cursor-pointer bg-white border border-white/40 text-blue font-semibold px-4 md:px-5 py-3">
@@ -531,5 +495,27 @@
     </div>
 </div>
 
-
+<script>
+    var swiper = new Swiper(".mySwiper", {
+        freeMode: true,
+        speed: 20000,
+        centeredSlides: true,
+        slidesPerView: 1,
+        spaceBetween: 50,
+        autoplay: {
+            disableOnInteraction: false,
+            delay: 0.1,
+        },
+        loop: true,
+        grabCursor: false,
+        breakpoints: {
+            640: {
+                slidesPerView: 2,
+            },
+            768: {
+                slidesPerView: 3,
+            },
+        },
+    });
+</script>
 {% endblock %}

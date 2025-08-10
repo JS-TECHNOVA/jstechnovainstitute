@@ -54,28 +54,6 @@ window.addEventListener("scroll", (e) => {
 	window.prev = current;
 });
 
-var swiper = new Swiper(".mySwiper", {
-	freeMode: true,
-	speed: 20000,
-	centeredSlides: true,
-	slidesPerView: 1,
-	spaceBetween: 50,
-	autoplay: {
-		disableOnInteraction: false,
-		delay: 0.1,
-	},
-	loop: true,
-	grabCursor: false,
-	breakpoints: {
-		640: {
-			slidesPerView: 2,
-		},
-		768: {
-			slidesPerView: 3,
-		},
-	},
-});
-
 // book_now modal - start
 
 const toggle_bn_modal = (event) => {
@@ -88,3 +66,41 @@ document.querySelectorAll("#boon_now_btn")?.forEach((el) => {
 });
 
 // book now modal - end
+
+const side_menu_drawer = document.querySelector("#side_menu_drawer");
+
+const wind_nav_listener = (e) => {
+	if (e.target == side_menu_drawer) {
+		side_menu_drawer.classList.toggle("hidden");
+		window.removeEventListener("click", wind_nav_listener);
+	}
+};
+document.querySelector("#side_menu_btn").addEventListener("click", (e) => {
+	side_menu_drawer.classList.toggle("hidden");
+	window.addEventListener("click", wind_nav_listener);
+});
+
+// student feedbacks
+
+const st_feedback_slides = document.querySelectorAll("#st_feedback");
+let current_feedback_slide_index = 0;
+
+function showSlide(index) {
+	st_feedback_slides.forEach((slide) => slide.classList.add("hidden"));
+	st_feedback_slides[index].classList.remove("hidden");
+}
+
+document.getElementById("prev_feedback_btn").addEventListener("click", () => {
+	current_feedback_slide_index =
+		(current_feedback_slide_index - 1 + st_feedback_slides.length) %
+		st_feedback_slides.length;
+	showSlide(current_feedback_slide_index);
+});
+
+document.getElementById("next_feedback_btn").addEventListener("click", () => {
+	current_feedback_slide_index =
+		(current_feedback_slide_index + 1) % st_feedback_slides.length;
+	showSlide(current_feedback_slide_index);
+});
+
+showSlide(0);

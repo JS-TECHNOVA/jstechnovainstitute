@@ -17,6 +17,8 @@
 	--color-azure: #0684fe;
 	--color-blue: #0364fe;
 	--color-vivid-blue: #0433fe;
+
+	--animate-slide-in: slide-in 300ms ease-in;
 }
 
 @utility container {
@@ -27,6 +29,22 @@
 	.input {
 		@apply border rounded-md px-2 py-2 block w-full outline-none focus-within:border-blue;
 	}
+}
+
+@utility heading {
+	@apply text-xl sm:text-2xl text-vivid-blue font-bold mb-2 uppercase;
+}
+
+@utility heading-content {
+	@apply sm:text-xl text-pretty;
+}
+
+@utility heading-container {
+	@apply max-w-prose mx-auto text-center;
+}
+
+@utility sub-heading {
+	@apply text-lg sm:text-xl text-vivid-blue font-bold;
 }
 
 .nav-span {
@@ -60,4 +78,13 @@ footer li a::after {
 }
 footer li a:hover::after {
 	width: 100%;
+}
+
+@keyframes slide-in {
+	from {
+		right: -500px;
+	}
+	to {
+		right: 0px;
+	}
 }

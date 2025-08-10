@@ -1,0 +1,19 @@
+<div class="group/tutors relative block bg-vivid-blue/50 aspect-[4/5] rounded-3xl overflow-hidden w-96">
+    <img alt="" src="{{ tutor.image.url }}" class="h-full w-full object-cover object-top" />
+
+    <div class="absolute bottom-2 left-2 right-2 p-4 pt-6 rounded-3xl bg-white shadow">
+        <p
+            class="text-xs absolute -top-2.5 tracking-widest text-white py-0.5 px-1 bg-azure inline-block rounded-md uppercase">
+            {{tutor.subject}}</p>
+        <div class="">
+            <p class="text-lg font-bold tracking-wider uppercase leading-2">{{ tutor.name }}</p>
+            <p class="opacity-50 text-sm">{{tutor.qualification}}</p>
+        </div>
+        <div class="text-sm">
+            💼 {{tutor.year_of_exp}} {% if tutor.year_of_exp > 1 %} Years {% else %} Year {% endif %}
+        </div>
+        <p class="h-0 overflow-hidden group-hover/tutors:h-32 transition-all ease-out duration-300">
+            {{tutor.about}}
+        </p>
+    </div>
+</div>
