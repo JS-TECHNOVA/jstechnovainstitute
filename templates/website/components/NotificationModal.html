@@ -1,0 +1,19 @@
+<!-- Success Modal -->
+<div class="fixed inset-0 z-[999999] bg-black/50 flex items-end justify-center overflow-y-auto py-20" role="dialog"
+    aria-modal="true" id="successModal">
+    <div class="bg-white p-8 rounded-lg space-y-4 w-full max-w-sm relative animate-slide-up">
+        <div class="sub-heading">✅ Success</div>
+        <div class="modal-message">
+            <ul>
+                {% for message in messages %}
+                <li{% if message.tags %} class="{{ message.tags }}" {% endif %}>{{ message }}</li>
+                    {% endfor %}
+            </ul>
+        </div>
+
+        <div class="text-right mt-8">
+            <button class="bg-blue hover:bg-vivid-blue text-white rounded px-4 py-2 cursor-pointer"
+                onclick="closeModal('successModal')">Close</button>
+        </div>
+    </div>
+</div>

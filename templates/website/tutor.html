@@ -1,296 +1,106 @@
-<!DOCTYPE html>
-<html lang="en">
+{% extends 'website/base.html' %}
+{% load static %}
+{% block content %}
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="../../static/website/css/output.css" />
-    <link rel="stylesheet" href="../../static/website/css/swiper.css" />
-    <script src="../../static/website/js/swiper.js"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Teachers:ital,wght@0,400..800;1,400..800&display=swap"
-        rel="stylesheet">
+<div class="mt-20  container rounded-3xl grid lg:grid-cols-2 gap-20">
+    <div class="text-center place-content-center mx-auto p-12 bg-vivid-blue/20 rounded-3xl space-y-4">
 
-</head>
 
-<body>
-    <header id="header"
-        class="transition  duration-700 ease-in-out container fixed left-0 right-0 top-2 bg-white max-w-6xl rounded-xl z-[999]">
-        <div class="flex h-16 items-center justify-between gap-8 px-4">
-            <a class="inline-flex items-center gap-x-2" href="#">
-                <img src="../../static/website/media/icon-small.png" class="w-10" />
-                <span class="text-base leading-4 font-bold">Technova <br />Institute</span>
-            </a>
+        <p class="font-medium uppercase tracking-widest">
+            Join Our Team
+        </p>
 
-            <div class="flex items-center ">
-                <nav aria-label="Global" class="">
-                    <ul class="flex items-center text-sm relative">
-                        <span class="nav-span transition-all duration-400 ease-out"></span>
-                        <li>
-                            <a class="font-medium nav-links px-2 active-nav" href="#"> Home </a>
-                        </li>
+        <p class="text-5xl leading-14 font-bold text-vivid-blue">Empower the Next Generation</p>
 
-                        <li>
-                            <a class="font-medium nav-links px-2" href="#"> About </a>
-                        </li>
+        <p class="text-pretty">
+            Are you a passionate educator looking to make a real impact from anywhere in the world? At JS
+            TechnoVa Institute, we're
+            building a vibrant community of dedicated teachers who are shaping the future of online learning. If
+            you're ready to
+            inspire, innovate, and grow, we invite you to become a part of our dynamic faculty.
+        </p>
 
-                        <li>
-                            <a class="font-medium nav-links px-2" href="#"> Tutors </a>
-                        </li>
+        <a class="group rounded-3xl bg-blue text-white px-8 inline-block mt-4 py-3 font-medium cursor-pointer"
+            href="#join">
+            Join Us
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                stroke="currentColor" class="size-6 inline-block w-0 group-hover:w-6 transition-all duration-200">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3" />
+            </svg>
+        </a>
+    </div>
 
-                        <li>
-                            <a class="font-medium nav-links px-2" href="#"> Courses </a>
-                        </li>
+    <div class="">
+        <img src="../../static/website/media/teacher.png" class="aspect-auto h-full mx-auto" />
+    </div>
 
-                        <li>
-                            <a class="font-medium nav-links px-2" href="#"> Contact </a>
-                        </li>
 
-                        <li>
-                            <a class="font-medium nav-links px-2" href="#"> Blogs </a>
-                        </li>
-                    </ul>
-                </nav>
+    <div class="place-content-center space-y-4">
+        <p class="font-medium text-2xl uppercase tracking-widest">
+            Your Scope for Impact
+        </p>
+        <p class="text-pretty">
+            At JS TechnoVa Institute, your teaching potential is limitless. You'll have the opportunity to:
+        </p>
+
+        <ul class="list-inside list-decimal space-y-4">
+            <li>
+                Specialize in Your Passion: Teach subjects you love, from foundational mathematics and physics to
+                advanced coding and
+                beyond.
+            </li>
+            <li>
+                Personalize Learning: Deliver tailored one-on-one or small-group sessions, adapting your approach to
+                meet each student's
+                unique needs and learning style.
+            </li>
+            <li>Witness Growth: Experience the immense satisfaction of seeing your students grasp challenging
+                concepts, build
+                confidence, and achieve their academic goals.</li>
+        </ul>
+
+        <p class="font-medium text-2xl uppercase tracking-widest">
+            Ready to Inspire?
+        </p>
+        <p class="text-pretty">
+            If you're a certified teacher with a passion for online education and a commitment to student
+            excellence, we
+            want to
+            hear from you! Take the next step in your teaching career and become a part of the JS TechnoVa Institute
+            family. </p>
+
+
+    </div>
+
+    <div id="join" class="p-12 bg-vivid-blue/10 rounded-3xl space-y-4 mb-12">
+        <h1 class="font-bold text-2xl">Join Us</h1>
+        <form class="flex flex-col gap-y-4 mt-8" method="post" action="{% url 'tutors' %}"
+            enctype="multipart/form-data">
+            {% csrf_token %}
+            {% for field in tutor_reg_form %}
+            <div class="fieldWrapper">
+                {{ field.label_tag }} {{ field }}
+                {{ field.errors }}
             </div>
-            <button id="boon_now_btn" class="group cursor-pointer rounded-xl bg-blue text-white font-medium px-4 py-2"
-                href="#">
-                Book Your Demo Class
+            {% endfor %}
+            <label>
+                <input type="checkbox" required />
+                <span>I agree to be contacted by JS Technova Institute with information about my
+                    request</span>
+            </label>
+
+            <button class="group rounded-3xl bg-blue text-white px-8 py-3 font-medium cursor-pointer" href="#">
+                Send
+
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                    stroke="currentColor" class="size-6 inline-block w-0 group-hover:w-6 transition-all duration-300">
+                    stroke="currentColor" class="size-6 inline-block w-0 group-hover:w-6 transition-all duration-200">
                     <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3" />
                 </svg>
+
             </button>
+        </form>
+    </div>
 
-        </div>
-    </header>
+</div>
 
-    <section class="mt-20  container rounded-3xl grid grid-cols-2 gap-20">
-        <div class="text-center place-content-center mx-auto p-12 bg-vivid-blue/20 rounded-3xl space-y-4">
-
-
-            <p class="font-medium uppercase tracking-widest">
-                Join Our Team
-            </p>
-
-            <p class="text-5xl leading-14 font-bold text-vivid-blue">Empower the Next Generation</p>
-
-            <p class="text-pretty">
-                Are you a passionate educator looking to make a real impact from anywhere in the world? At JS
-                TechnoVa Institute, we're
-                building a vibrant community of dedicated teachers who are shaping the future of online learning. If
-                you're ready to
-                inspire, innovate, and grow, we invite you to become a part of our dynamic faculty.
-            </p>
-        </div>
-
-        <div class="">
-            <img src="../../static/website/media/teacher.png" class="aspect-auto h-full mx-auto" />
-        </div>
-
-
-        <div class="place-content-center space-y-4">
-            <p class="font-medium text-2xl uppercase tracking-widest">
-                Your Scope for Impact
-            </p>
-            <p class="text-pretty">
-                At JS TechnoVa Institute, your teaching potential is limitless. You'll have the opportunity to:
-            </p>
-
-            <ul class="list-inside list-decimal space-y-4">
-                <li>
-                    Specialize in Your Passion: Teach subjects you love, from foundational mathematics and physics to
-                    advanced coding and
-                    beyond.
-                </li>
-                <li>
-                    Personalize Learning: Deliver tailored one-on-one or small-group sessions, adapting your approach to
-                    meet each student's
-                    unique needs and learning style.
-                </li>
-                <li>Witness Growth: Experience the immense satisfaction of seeing your students grasp challenging
-                    concepts, build
-                    confidence, and achieve their academic goals.</li>
-            </ul>
-
-            <p class="font-medium text-2xl uppercase tracking-widest">
-                Ready to Inspire?
-            </p>
-            <p class="text-pretty">
-                If you're a certified teacher with a passion for online education and a commitment to student
-                excellence, we
-                want to
-                hear from you! Take the next step in your teaching career and become a part of the JS TechnoVa Institute
-                family. </p>
-
-
-        </div>
-
-        <div class="p-12 bg-vivid-blue/10 rounded-3xl space-y-4">
-            <h1 class="font-bold text-2xl">Join Us</h1>
-            <form class="flex flex-col gap-y-4 mt-8">
-                <label class="">
-                    <span>Full Name</span>
-                    <input type="text" class="input" />
-                </label>
-
-                <label>
-                    <span>Email Address</span>
-                    <input type="text" class="input" />
-                </label>
-
-                <label>
-                    <span>Phone No.</span>
-                    <input type="text" class="input" />
-                </label>
-
-                <label>
-                    <span>Attach your CV</span>
-                    <input class="input" type="file" />
-                </label>
-
-                <label>
-                    <input type="checkbox" />
-                    <span>I agree to be contacted by JS Technova Institute with information about my
-                        request</span>
-                </label>
-
-                <button class="group rounded-3xl bg-blue text-white px-8 py-3 font-medium cursor-pointer" href="#">
-                    Send
-
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                        stroke="currentColor"
-                        class="size-6 inline-block w-0 group-hover:w-6 transition-all duration-200">
-                        <path stroke-linecap="round" stroke-linejoin="round"
-                            d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3" />
-                    </svg>
-
-                </button>
-            </form>
-        </div>
-
-    </section>
-
-
-    <footer class="container bg-blue rounded-3xl text-white my-8 shadow-2xl py-20">
-        <div class="max-w-6xl mx-auto">
-
-            <div class="">
-                <div class="grid grid-cols-2">
-                    <div class="">
-                        <a class="inline-flex items-center gap-x-2" href="#">
-                            <img src="../../static/website/media/icon-small.png" class="w-20" />
-                            <span class="text-4xl leading-8 font-bold">Technova <br />Institute</span>
-                        </a>
-                        <div class="text-2xl mt-2">
-                            Innovate. Inspire. Impact.
-                        </div>
-                    </div>
-
-                    <div class="">
-                        <h2 class="text-2xl font-medium">Get Latest Updates and Offers!</h2>
-                        <form class="w-full mt-4">
-                            <label for="UserEmail" class="flex border border-white rounded-lg">
-                                <input type="email" id="UserEmail" placeholder="john@rhcp.com"
-                                    class="p-4 outline-none grow" />
-                                <button class="bg-white text-blue font-semibold rounded-lg px-8 m-0.5 cursor-pointer">
-                                    Submit
-                                </button>
-                            </label>
-                        </form>
-
-                    </div>
-
-                </div>
-            </div>
-
-            <div class="mt-8 grid grid-cols-1 gap-8 sm:grid-cols-3">
-                <div>
-                    <p class="font-medium">Services</p>
-
-                    <ul class="mt-6 space-y-4 text-sm">
-                        <li>
-                            <a href="#"> 1on1 Coaching </a>
-                        </li>
-
-                        <li>
-                            <a href="#"> Company Review </a>
-                        </li>
-
-                        <li>
-                            <a href="#"> Accounts Review </a>
-                        </li>
-
-                        <li>
-                            <a href="#"> HR Consulting </a>
-                        </li>
-
-                        <li>
-                            <a href="#"> SEO Optimisation </a>
-                        </li>
-                    </ul>
-                </div>
-
-                <div>
-                    <p class="font-medium">Company</p>
-
-                    <ul class="mt-6 space-y-4 text-sm">
-                        <li>
-                            <a href="#"> About </a>
-                        </li>
-
-                        <li>
-                            <a href="#"> Meet the Team </a>
-                        </li>
-
-                        <li>
-                            <a href="#"> Accounts Review </a>
-                        </li>
-                    </ul>
-                </div>
-
-                <div>
-                    <p class="font-medium ">Helpful Links</p>
-
-                    <ul class="mt-6 space-y-4 text-sm">
-                        <li>
-                            <a href="#"> Contact </a>
-                        </li>
-
-                        <li>
-                            <a href="#"> FAQs </a>
-                        </li>
-
-                        <li>
-                            <a href="#"> Live Chat </a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="mt-8 border-t border-gray-100 pt-8">
-                <ul class="flex flex-wrap gap-4 text-xs">
-                    <li>
-                        <a href="#"> Terms & Conditions </a>
-                    </li>
-
-                    <li>
-                        <a href="#"> Privacy Policy </a>
-                    </li>
-
-                    <li>
-                        <a href="#"> Cookies </a>
-                    </li>
-                </ul>
-
-                <p class="mt-8 text-xs">&copy; 2022. Company Name. All rights reserved.</p>
-            </div>
-        </div>
-    </footer>
-
-</body>
-
-<script src="../../static/website/js/main.js"></script>
-
-</html>
+{% endblock %}

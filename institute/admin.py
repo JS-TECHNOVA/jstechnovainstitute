@@ -4,3 +4,6 @@ from .models import *
 
 admin.site.register(Tutors)
 admin.site.register(StudentFeedbacks)
+admin.site.register(GetInTouch)
+admin.site.register(DemoClassBooking)
+admin.site.register(TutorRegistrations)

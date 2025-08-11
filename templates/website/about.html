@@ -1,638 +1,150 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>About | Technova Institute</title>
-    <link rel="stylesheet" href="../../static/website/css/output.css" />
-    <link rel="stylesheet" href="../../static/website/css/swiper.css" />
-    <script src="../../static/website/js/swiper.js"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Teachers:ital,wght@0,400..800;1,400..800&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
-    <link
-      href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css"
-      rel="stylesheet"
-    />
-  </head>
+{% extends 'website/base.html' %}
+{% load static %}
+{% block content %}
 
-  <body class="bg-gray-100 font-[Teachers] text-gray-900">
-    <!-- Header -->
-    <header
-      id="header"
-      class="transition duration-700 ease-in-out container fixed left-0 right-0 top-2 bg-white max-w-6xl rounded-xl z-[999]"
-    >
-      <div class="flex h-16 items-center justify-between gap-8 px-4">
-        <a class="inline-flex items-center gap-x-2" href="#">
-          <img src="../../static/website/media/icon-small.png" class="w-10" />
-          <span class="text-base leading-4 font-bold"
-            >Technova <br />Institute</span
-          >
-        </a>
+<div class="mt-20 relative bg-gradient-to-br from-blue/90 to-vivid-blue/60 rounded-3xl container overflow-hidden">
 
-        <div class="flex items-center">
-          <nav aria-label="Global">
-            <ul class="flex items-center text-sm relative">
-              <span
-                class="nav-span transition-all duration-400 ease-out"
-              ></span>
-              <li><a class="font-medium nav-links px-2" href="#">Home</a></li>
-              <li>
-                <a class="font-medium nav-links px-2 active-nav" href="#"
-                  >About</a
-                >
-              </li>
-              <li><a class="font-medium nav-links px-2" href="#">Tutors</a></li>
-              <li>
-                <a class="font-medium nav-links px-2" href="#">Courses</a>
-              </li>
-              <li>
-                <a class="font-medium nav-links px-2" href="#">Contact</a>
-              </li>
-              <li><a class="font-medium nav-links px-2" href="#">Blogs</a></li>
-            </ul>
-          </nav>
-        </div>
+  <img src="{% static 'website/media/math.png' %}"
+    class="absolute inset-0 w-full h-full object-cover opacity-20 -z-10" />
 
-        <button
-          id="boon_now_btn"
-          class="group cursor-pointer rounded-xl bg-blue text-white font-medium px-4 py-2"
-        >
-          Book Your Demo Class
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke-width="1.5"
-            stroke="currentColor"
-            class="size-6 inline-block w-0 group-hover:w-6 transition-all duration-300"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3"
-            />
-          </svg>
-        </button>
-      </div>
-    </header>
-
-  
-  
-    
-
-    <section
-      class="mt-24 relative bg-gradient-to-br from-blue-600 to-blue-400 rounded-3xl container overflow-hidden"
-      data-aos="fade-up"
-      data-aos-duration="1000"
-    >
-    
-      <img
-        src="../../static/website/media/about-banner.png"
-        class="absolute inset-0 w-full h-full object-cover opacity-20 -z-10 animate-fade"
-      />
-
-      <div
-        class="max-w-4xl mx-auto text-center py-20 px-6 text-white"
-        data-aos="zoom-in"
-        data-aos-delay="200"
-      >
-        <h1 class="text-5xl font-extrabold mb-4 animate-pulse">
-          About Technova Institute
-        </h1>
-        <p class="text-xl font-medium leading-relaxed animate-fade-in">
-          "At Technova Institute, we empower students from Class 1 to 12 with
-          expert-led online tutoring across all subjects. Aligned with CBSE, UP
-          Board, and ICSE curriculums, we deliver personalized education that
-          builds confidence, strengthens concepts, and ensures academic
-          excellence — all from the comfort of home."
-        </p>
-      </div>
-    </section>
-
-    <!-- AOS JS -->
-    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
-    <script>
-      AOS.init();
-    </script>
-
-    <!-- Optional: Tailwind CSS custom animation utilities -->
-    <style>
-      @keyframes fade {
-        0% {
-          opacity: 0;
-        }
-        100% {
-          opacity: 0.2;
-        }
-      }
-
-      @keyframes fade-in {
-        0% {
-          opacity: 0;
-          transform: translateY(40px);
-        }
-        100% {
-          opacity: 1;
-          transform: translateY(0);
-        }
-      }
-
-      .animate-fade {
-        animation: fade 2s ease-in-out forwards;
-      }
-
-      .animate-fade-in {
-        animation: fade-in 1.5s ease-in-out forwards;
-      }
-    </style>
-
-    <!-- Content -->
-    <section class="container mt-20 space-y-20">
-      <!-- Who We Are -->
-      <div class="grid md:grid-cols-2 gap-10 items-center">
-        <div>
-          <img
-            src="../../static/website/media/classroom.jpg"
-            alt="Tutoring session"
-            class="rounded-xl shadow-lg"
-          />
-        </div>
-        <div>
-          <h2 class="text-3xl font-bold text-blue mb-4">Who We Are</h2>
-          <p class="text-xl text-gray-700">
-            Technova Institute is more than just an online education
-            platform—it's a vision to transform the way students learn, grow,
-            and succeed in today’s digital age. We believe in nurturing not just
-            academically competent individuals but confident, curious, and
-            self-driven learners. At Technova, we offer a personalized learning
-            experience for students from classes 1 to 12 across all major boards
-            including CBSE, ICSE, and UP Board, with comprehensive coverage of
-            all core subjects like Mathematics, Science, English, Social
-            Studies, and more. What sets us apart is our student-centric
-            approach—each learner is unique, and so is their learning journey.
-            That's why we emphasize customized mentorship, live interactive
-            sessions, regular doubt-solving, and conceptual clarity through
-            real-world examples.
-          </p>
-        </div>
-      </div>
-
-  <!-- Vision & Mission -->
-<div class="grid md:grid-cols-2 gap-8 ">
-  
-  <!-- Vision Box -->
-  <div class="p-8 rounded-2xl bg-gray-300">
-    <h3 class="text-2xl font-bold text-blue mb-2 text-center">
-      🌟 Our Vision
-    </h3>
-    <p class="text-gray-900 text-xl">
-      Education is not just a tool for personal growth—it is the
-      foundation of an empowered and progressive society. In today’s
-      fast-evolving world, access to quality tutoring has become essential
-      for students to keep pace with academic standards and to develop
-      skills beyond the classroom. The vision of building a future where
-      every student can access world-class tutoring and become a
-      confident, critical thinker is not merely an idealistic goal—it is a
-      necessary mission that can redefine how education shapes the next
-      generation. The traditional model of education often leaves behind
-      students who lack resources or one-on-one guidance.
+  <div class="max-w-prose mx-auto text-center py-20 px-4 text-white">
+    <h1 class="text-2xl md:text-3xl lg:text-5xl font-extrabold mb-4">
+      About JS Technova Institute
+    </h1>
+    <p class="lg:text-xl font-medium leading-relaxed">
+      At Technova Institute, we empower students from Class 1 to 12 with
+      expert-led online tutoring across all subjects. Aligned with CBSE, UP
+      Board, and ICSE curriculums, we deliver personalized education that
+      builds confidence, strengthens concepts, and ensures academic
+      excellence — all from the comfort of home.
     </p>
   </div>
-
-  <!-- Mission Box -->
-  <div class="p-8 rounded-2xl bg-gray-300">
-    <h3 class="text-2xl font-bold text-blue mb-2 text-center">
-      🎯 Our Mission
-    </h3>
-    <p class="text-gray-900 text-xl">
-      At the heart of our educational initiative lies a powerful mission —
-      to deliver high-quality personalized tutoring that truly adapts to
-      the unique pace and learning style of every student. We believe that
-      every learner is different, and our approach ensures that each
-      student receives the attention, care, and tailored instruction they
-      need to thrive academically and personally. We are not just
-      educators — we are mentors, guides, and supporters dedicated to
-      shaping the future of education. Our mission goes beyond textbooks
-      and tests. We strive to nurture curiosity, build confidence, and
-      inspire a lifelong love for learning. Our tutors are trained to
-      recognize the strengths and weaknesses of each student.
-    </p>
-  </div>
-
 </div>
 
-      <!-- Why Choose Us -->
-      <div
-        class="bg-gray-300 shadow-2xl rounded-xl p-8 max-w-4xl mx-auto mt-15"
-      >
-        <div class="text-left">
-          <h2 class="text-3xl text-center font-bold text-vivid-blue mb-4">
-            Why Students Love Us
-          </h2>
-          <p class="text-gray-600 text-xl">
-            We stand out through a blend of dedication, expert mentorship, and
-            innovation, offering students a personalized and immersive learning
-            experience. Our team is committed to nurturing talent by combining
-            theory with practical exposure, enabling learners to apply concepts
-            in real-world scenarios. We focus on building critical thinking,
-            problem-solving abilities, and technical skills that align with
-            current industry standards. With engaging sessions, continuous
-            support, and hands-on projects, we ensure our students are not only
-            well-prepared but also confident to face challenges. Our holistic
-            approach empowers every learner to reach their true potential and
-            turn their aspirations into accomplishments.
-          </p>
-        </div>
-      </div>
+<section class="container space-y-12">
+  <!-- Who We Are -->
+  <div class="grid md:grid-cols-2 gap-12 items-center">
+    <div>
+      <img src="../../static/website/media/logo.png" alt="Tutoring session" class="mx-auto" />
+    </div>
+    <div class="">
+      <h2 class="heading">Who We Are</h2>
+      <p class="heading-content">
+        Technova Institute is more than just an online education
+        platform—it's a vision to transform the way students learn, grow,
+        and succeed in today's digital age. We believe in nurturing not just
+        academically competent individuals but confident, curious, and
+        self-driven learners. At Technova, we offer a personalized learning
+        experience for students from classes 1 to 12 across all major boards
+        including CBSE, ICSE, and UP Board, with comprehensive coverage of
+        all core subjects like Mathematics, Science, English, Social
+        Studies, and more. What sets us apart is our student-centric
+        approach—each learner is unique, and so is their learning journey.
+        That's why we emphasize customized mentorship, live interactive
+        sessions, regular doubt-solving, and conceptual clarity through
+        real-world examples.
+      </p>
+    </div>
+  </div>
 
-      <!-- Swiper Section -->
-      <div
-        class="swiper mySwiper py-10 relative bg-gray-100 rounded-xl  px-4"
-      >
-        <div class="swiper-wrapper text-center">
-          <!-- Slide 1 -->
-          <div
-            class="swiper-slide bg-blue/10 rounded-xl p-6 h-full min-h-[340px] transition duration-500 hover:scale-105 hover:shadow-lg"
-          >
-            <img
-              src="../../static/website/media/tutor-vector.png"
-              class="w-30 h-30 mx-auto mb-3"
-            />
-            <h4 class="font-semibold text-lg text-blue">Top Mentors</h4>
-            <p class="text-gray-600">
-              Certified professionals with a student-first approach to teaching.
-              They focus on clarity, motivation, and long-term academic growth
-              through personalized mentorship and constant encouragement.
-            </p>
-          </div>
+  <!-- Vision & Mission -->
+  <div class="grid md:grid-cols-2 gap-12 ">
 
-          <!-- Slide 2 -->
-          <div
-            class="swiper-slide bg-blue/10 rounded-xl p-6 h-full min-h-[340px] transition duration-500 hover:scale-105 hover:shadow-lg"
-          >
-            <img
-              src="../../static/website/media/expert-teacher.png"
-              class="w-30 h-30 mx-auto mb-3"
-            />
-            <h4 class="font-semibold text-lg text-blue">Flexible Scheduling</h4>
-            <p class="text-gray-600">
-              Book sessions at your convenience — morning, afternoon, or
-              evening. We fit into your lifestyle to make learning consistent,
-              stress-free, and productive.
-            </p>
-          </div>
-
-          <!-- Slide 3 -->
-          <div
-            class="swiper-slide bg-blue/10 rounded-xl p-6 h-full min-h-[340px] transition duration-500 hover:scale-105 hover:shadow-lg"
-          >
-            <img
-              src="../../static/website/media/cbse board.png"
-              class="w-30 h-30 mx-auto mb-3"
-            />
-            <h4 class="font-semibold text-lg text-blue">Progress Tracking</h4>
-            <p class="text-gray-600">
-              Track improvement with regular reports and real-time feedback.
-              Parents and students stay informed with dashboards designed to
-              celebrate milestones and focus efforts.
-            </p>
-          </div>
-
-          <!-- Slide 4 -->
-          <div
-            class="swiper-slide bg-blue/10 rounded-xl p-6 h-full min-h-[340px] transition duration-500 hover:scale-105 hover:shadow-lg"
-          >
-            <img
-              src="../../static/website/media/classroom.jpg"
-              class="w-30 h-30 mx-auto mb-3"
-            />
-            <h4 class="font-semibold text-lg text-blue">
-              Smart Learning Tools
-            </h4>
-            <p class="text-gray-600">
-              We leverage modern tools like interactive whiteboards, quizzes,
-              and AI-assisted insights to make every session productive,
-              engaging, and easy to review.
-            </p>
-          </div>
-
-          <!-- Slide 5 -->
-          <div
-            class="swiper-slide bg-blue/10 rounded-xl p-6 h-full min-h-[340px] transition duration-500 hover:scale-105 hover:shadow-lg"
-          >
-            <img
-              src="../../static/website/media/young-mother-working-from-home-with-daughter.jpg"
-              class="w-30 h-30 mx-auto mb-3"
-            />
-            <h4 class="font-semibold text-lg text-blue">24/7 Mentor Support</h4>
-            <p class="text-gray-600">
-              Our team is always here to assist. Whether it's homework help or
-              motivation to push through, our mentors are available when you
-              need them most.
-            </p>
-          </div>
-        </div>
-
-        <!-- Swiper Pagination inside the box -->
-        <div class="swiper-pagination mt-6 flex justify-center"></div>
-      </div>
-
-      <!-- Swiper JS -->
-      <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
-      <script>
-        var swiper = new Swiper(".mySwiper", {
-          slidesPerView: 1,
-          spaceBetween: 20,
-          loop: true,
-          autoplay: {
-            delay: 3000,
-            disableOnInteraction: false,
-            pauseOnMouseEnter: false,
-          },
-          pagination: {
-            el: ".swiper-pagination",
-            clickable: true,
-          },
-          breakpoints: {
-            768: {
-              slidesPerView: 3,
-            },
-          },
-          speed: 800,
-          effect: "slide",
-        });
-      </script>
-
-      <!-- Our Achievements -->
-      <div class="bg-gray-300 p-10 rounded-3xl shadow-lg text-center">
-        <h2 class="text-3xl font-bold text-blue mb-4">
-          Our Progress at a Glance
-        </h2>
-        <div class="grid sm:grid-cols-2 md:grid-cols-4 gap-6 text-blue">
-          <div>
-            <p class="text-4xl font-extrabold">5K+</p>
-            <p class="text-sm">Happy Students</p>
-          </div>
-          <div>
-            <p class="text-4xl font-extrabold">150+</p>
-            <p class="text-sm">Expert Tutors</p>
-          </div>
-          <div>
-            <p class="text-4xl font-extrabold">25+</p>
-            <p class="text-sm">Subjects Covered</p>
-          </div>
-          <div>
-            <p class="text-4xl font-extrabold">100%</p>
-            <p class="text-sm">Satisfaction Rate</p>
-          </div>
-        </div>
-      </div>
-
-  
-
-
-<!-- Tutor Team Section -->
-<section class="py-12 bg-gray-100">
-  <h2 class="text-center text-3xl font-bold text-vivid-blue mb-8 animate-fade-in-up">
-    Meet Our Top Tutors
-  </h2>
-
-  <div class="swiper tutorSwiper px-6">
-    <div class="swiper-wrapper">
-      <!-- Tutor 1 -->
-      <div class="swiper-slide text-center">
-        <img
-          src="https://randomuser.me/api/portraits/women/44.jpg"
-          class="w-24 h-24 mx-auto rounded-full mb-2 transition-transform duration-300 hover:scale-110"
-        />
-        <p class="font-medium">Priya Sharma</p>
-        <p class="text-sm text-gray-500">Math Mentor</p>
-      </div>
-
-      <!-- Tutor 2 -->
-      <div class="swiper-slide text-center">
-        <img
-          src="https://randomuser.me/api/portraits/men/33.jpg"
-          class="w-24 h-24 mx-auto rounded-full mb-2 transition-transform duration-300 hover:scale-110"
-        />
-        <p class="font-medium">Amit Verma</p>
-        <p class="text-sm text-gray-500">Science Tutor</p>
-      </div>
-
-      <!-- Tutor 3 -->
-      <div class="swiper-slide text-center">
-        <img
-          src="https://randomuser.me/api/portraits/men/66.jpg"
-          class="w-24 h-24 mx-auto rounded-full mb-2 transition-transform duration-300 hover:scale-110"
-        />
-        <p class="font-medium">John Doe</p>
-        <p class="text-sm text-gray-500">English Expert</p>
-      </div>
-
-      <!-- Tutor 4 -->
-      <div class="swiper-slide text-center">
-        <img
-          src="https://randomuser.me/api/portraits/women/68.jpg"
-          class="w-24 h-24 mx-auto rounded-full mb-2 transition-transform duration-300 hover:scale-110"
-        />
-        <p class="font-medium">Anjali Mehta</p>
-        <p class="text-sm text-gray-500">Coding Guide</p>
-      </div>
-
-    
+    <!-- Vision Box -->
+    <div class="p-5 md:p-10 rounded-3xl bg-vivid-blue/10 relative overflow-hidden">
+      <span class="absolute -left-10 -top-5 text-9xl -z-10 opacity-60">🌟</span>
+      <h3 class="heading">
+        Our Vision
+      </h3>
+      <p class="heading-content mt-4 md:mt-8">
+        Education is not just a tool for personal growth—it is the
+        foundation of an empowered and progressive society. In today's
+        fast-evolving world, access to quality tutoring has become essential
+        for students to keep pace with academic standards and to develop
+        skills beyond the classroom. The vision of building a future where
+        every student can access world-class tutoring and become a
+        confident, critical thinker is not merely an idealistic goal—it is a
+        necessary mission that can redefine how education shapes the next
+        generation. The traditional model of education often leaves behind
+        students who lack resources or one-on-one guidance.
+      </p>
     </div>
 
-    <!-- Swiper Pagination -->
-    <div class="swiper-pagination mt-4"></div>
+    <!-- Mission Box -->
+    <div class="p-5 md:p-10 rounded-3xl bg-vivid-blue/10 relative overflow-hidden">
+      <span class="absolute -left-10 -top-5 text-9xl -z-10 opacity-60">🎯</span>
+
+      <h3 class="heading">
+        Our Mission
+      </h3>
+      <p class="heading-content mt-4 md:mt-8">
+        At the heart of our educational initiative lies a powerful mission —
+        to deliver high-quality personalized tutoring that truly adapts to
+        the unique pace and learning style of every student. We believe that
+        every learner is different, and our approach ensures that each
+        student receives the attention, care, and tailored instruction they
+        need to thrive academically and personally. We are not just
+        educators — we are mentors, guides, and supporters dedicated to
+        shaping the future of education. Our mission goes beyond textbooks
+        and tests. We strive to nurture curiosity, build confidence, and
+        inspire a lifelong love for learning. Our tutors are trained to
+        recognize the strengths and weaknesses of each student.
+      </p>
+    </div>
+
   </div>
-</section>
 
-<!-- Include Swiper JS -->
-<script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+  <!-- Why Choose Us -->
+  <div class="p-5 md:p-10 rounded-3xl bg-vivid-blue/10 relative overflow-hidden">
+    <span class="absolute -left-10 -top-5 text-9xl -z-10 opacity-60">💖</span>
 
-<!-- Swiper Initialization -->
-<script>
-  var swiper = new Swiper(".tutorSwiper", {
-    slidesPerView: 1,
-    spaceBetween: 20,
-    loop: true,
-    autoplay: {
-      delay: 2500,
-      disableOnInteraction: false,
-    },
-    pagination: {
-      el: ".swiper-pagination",
-      clickable: true,
-    },
-    breakpoints: {
-      640: {
-        slidesPerView: 2,
-      },
-      768: {
-        slidesPerView: 3,
-      },
-      1024: {
-        slidesPerView: 4,
-      },
-    },
-  });
-</script>
+    <h2 class="heading">
+      Why Students Love Us
+    </h2>
+    <p class="heading-content mt-4 md:mt-8">
+      We stand out through a blend of dedication, expert mentorship, and
+      innovation, offering students a personalized and immersive learning
+      experience. Our team is committed to nurturing talent by combining
+      theory with practical exposure, enabling learners to apply concepts
+      in real-world scenarios. We focus on building critical thinking,
+      problem-solving abilities, and technical skills that align with
+      current industry standards. With engaging sessions, continuous
+      support, and hands-on projects, we ensure our students are not only
+      well-prepared but also confident to face challenges. Our holistic
+      approach empowers every learner to reach their true potential and
+      turn their aspirations into accomplishments.
+    </p>
+  </div>
 
-<!-- Optional: TailwindCSS fade-in animation -->
-<style>
-  .animate-fade-in-up {
-    animation: fadeInUp 1s ease-out;
-  }
-  @keyframes fadeInUp {
-    from {
-      opacity: 0;
-      transform: translateY(20px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-</style>
-
-
-    <!-- Footer -->
-    <footer
-      class="container bg-blue rounded-3xl text-white my-8 shadow-2xl py-20"
-    >
-      <div class="max-w-6xl mx-auto">
-        <div class="">
-          <div class="grid grid-cols-2">
-            <div class="">
-              <a class="inline-flex items-center gap-x-2" href="#">
-                <img
-                  src="../../static/website/media/icon-small.png"
-                  class="w-20"
-                />
-                <span class="text-4xl leading-8 font-bold"
-                  >Technova <br />Institute</span
-                >
-              </a>
-              <div class="text-2xl mt-2">Innovate. Inspire. Impact.</div>
-            </div>
-
-            <div class="">
-              <h2 class="text-2xl font-medium">
-                Get Latest Updates and Offers!
-              </h2>
-              <form class="w-full mt-4">
-                <label
-                  for="UserEmail"
-                  class="flex border border-white rounded-lg"
-                >
-                  <input
-                    type="email"
-                    id="UserEmail"
-                    placeholder="john@rhcp.com"
-                    class="p-4 outline-none grow"
-                  />
-                  <button
-                    class="bg-white text-blue font-semibold rounded-lg px-8 m-0.5 cursor-pointer"
-                  >
-                    Submit
-                  </button>
-                </label>
-              </form>
-            </div>
-          </div>
+  <!-- Our Achievements -->
+  <div class="bg-gradient-to-r from-azure to-blue p-5 md:p-10 rounded-3xl shadow-lg text-center text-white mb-12">
+    <div class="max-w-6xl mx-auto">
+      <h2 class="text-3xl font-bold mb-4">
+        Our Progress at a Glance
+      </h2>
+      <div class="mt-12 grid grid-cols-2 md:grid-cols-4 gap-6">
+        <div>
+          <p class="text-6xl mb-2">🥰</p>
+          <p class="text-4xl font-extrabold">10+</p>
+          <p class="text-sm">Happy Students</p>
         </div>
-
-        <div class="mt-8 grid grid-cols-1 gap-8 sm:grid-cols-3">
-          <div>
-            <p class="font-medium">Services</p>
-
-            <ul class="mt-6 space-y-4 text-sm">
-              <li>
-                <a href="#"> 1on1 Coaching </a>
-              </li>
-
-              <li>
-                <a href="#"> Company Review </a>
-              </li>
-
-              <li>
-                <a href="#"> Accounts Review </a>
-              </li>
-
-              <li>
-                <a href="#"> HR Consulting </a>
-              </li>
-
-              <li>
-                <a href="#"> SEO Optimisation </a>
-              </li>
-            </ul>
-          </div>
-
-          <div>
-            <p class="font-medium">Company</p>
-
-            <ul class="mt-6 space-y-4 text-sm">
-              <li>
-                <a href="#"> About </a>
-              </li>
-
-              <li>
-                <a href="#"> Meet the Team </a>
-              </li>
-
-              <li>
-                <a href="#"> Accounts Review </a>
-              </li>
-            </ul>
-          </div>
-
-          <div>
-            <p class="font-medium">Helpful Links</p>
-
-            <ul class="mt-6 space-y-4 text-sm">
-              <li>
-                <a href="#"> Contact </a>
-              </li>
-
-              <li>
-                <a href="#"> FAQs </a>
-              </li>
-
-              <li>
-                <a href="#"> Live Chat </a>
-              </li>
-            </ul>
-          </div>
+        <div>
+          <p class="text-6xl mb-2">🧑‍🏫</p>
+          <p class="text-4xl font-extrabold">40+</p>
+          <p class="text-sm">Expert Tutors</p>
         </div>
-
-        <div class="mt-8 border-t border-gray-100 pt-8">
-          <ul class="flex flex-wrap gap-4 text-xs">
-            <li>
-              <a href="#"> Terms & Conditions </a>
-            </li>
-
-            <li>
-              <a href="#"> Privacy Policy </a>
-            </li>
-
-            <li>
-              <a href="#"> Cookies </a>
-            </li>
-          </ul>
-
-          <p class="mt-8 text-xs">
-            &copy; 2022. Company Name. All rights reserved.
-          </p>
+        <div>
+          <p class="text-6xl mb-2">📚</p>
+          <p class="text-4xl font-extrabold">20+</p>
+          <p class="text-sm">Subjects Covered</p>
+        </div>
+        <div>
+          <p class="text-6xl mb-2">😊</p>
+          <p class="text-4xl font-extrabold">99%</p>
+          <p class="text-sm">Satisfaction Rate</p>
         </div>
       </div>
-    </footer>
+    </div>
+  </div>
 
-    <script src="../../static/website/js/main.js"></script>
-  </body>
-</html>
+  {% endblock %}

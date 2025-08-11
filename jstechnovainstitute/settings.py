@@ -13,8 +13,12 @@ PRODUCTION = os.environ["PRODUCTION"]  # whether production of developement
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = (PRODUCTION == 'N')  # debug = False if production server
 
-ALLOWED_HOSTS = ["*"] if DEBUG else ["www.institute.jstechnova.in", "institute.jstechnova.in"]
+ALLOWED_HOSTS = [] if DEBUG else ["www.institute.jstechnova.in", "institute.jstechnova.in"]
 
+CSRF_TRUSTED_ORIGINS = [] if DEBUG else ["https://www.institute.jstechnova.in","https://institute.jstechnova.in"]
+CSRF_COOKIE_SECURE = True
+CSRF_COOKIE_NAME = "institute_csrftoken"
+CSRF_COOKIE_PATH = "institute.jstechnova.in/"
 # Application definition
 
 INSTALLED_APPS = [

@@ -1,13 +1,12 @@
 @import "tailwindcss";
-@source "../../../templates/**/*.html";
 
 @layer base {
 	* {
 		font-family: "Teachers", sans-serif;
 		font-optical-sizing: auto;
 		font-style: normal;
+		scroll-behavior: smooth;
 	}
-
 	body {
 		@apply bg-white;
 	}
@@ -17,8 +16,11 @@
 	--color-azure: #0684fe;
 	--color-blue: #0364fe;
 	--color-vivid-blue: #0433fe;
+	--color-success: #4caf50;
+	--color-error: #f44336;
 
 	--animate-slide-in: slide-in 300ms ease-in;
+	--animate-slide-up: slide-up 300ms ease-out;
 }
 
 @utility container {
@@ -29,6 +31,13 @@
 	.input {
 		@apply border rounded-md px-2 py-2 block w-full outline-none focus-within:border-blue;
 	}
+}
+
+.fieldWrapper input {
+	@apply border rounded-md px-2 py-2 block w-full outline-none focus-within:border-black;
+}
+.fieldWrapper label {
+	display: block;
 }
 
 @utility heading {
@@ -87,4 +96,26 @@ footer li a:hover::after {
 	to {
 		right: 0px;
 	}
+}
+
+.errorlist {
+	@apply text-error;
+}
+
+@keyframes slide-up {
+	from {
+		top: 50px;
+		opacity: 0;
+	}
+	to {
+		top: 0px;
+		opacity: 1;
+	}
+}
+
+.glass-card {
+	backdrop-filter: blur(50px) saturate(180%);
+	-webkit-backdrop-filter: blur(50px) saturate(180%);
+	border-radius: 12px;
+	border: 1px solid rgba(255, 255, 255, 0.125);
 }

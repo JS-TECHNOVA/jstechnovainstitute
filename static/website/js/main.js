@@ -104,3 +104,11 @@ document.getElementById("next_feedback_btn").addEventListener("click", () => {
 });
 
 showSlide(0);
+
+function openModal(id) {
+	document.getElementById(id).style.display = "flex";
+}
+
+function closeModal(id) {
+	document.getElementById(id).style.display = "none";
+}
