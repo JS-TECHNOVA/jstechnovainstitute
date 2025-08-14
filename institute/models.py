@@ -16,7 +16,7 @@ class Tutors(models.Model):
     subject = models.CharField(max_length=150)
 
     date_of_joining = models.DateField(blank=True, null=True)
-    about = models.CharField(max_length=100)
+    about = models.CharField(max_length=200)
 
     def __str__(self):
         return self.name
@@ -28,7 +28,7 @@ def upload_student_feedback(instance, filename):
 
 class StudentFeedbacks(models.Model):
     name = models.CharField(max_length=100)
-    message = models.CharField(max_length=300)
+    message = models.CharField(max_length=500)
     country = models.CharField(max_length=50)
     image = models.ImageField(upload_to=upload_student_feedback)
 

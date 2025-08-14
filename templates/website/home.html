@@ -481,27 +481,30 @@
     </div>
 </div>
 
+{% block script %}
 <script>
     var swiper = new Swiper(".mySwiper", {
         freeMode: true,
-        speed: 20000,
+        speed: 4000,
         centeredSlides: true,
         slidesPerView: 1,
-        spaceBetween: 50,
+        spaceBetween: 10,
+        disableOnInteraction: false,
         autoplay: {
             disableOnInteraction: false,
             delay: 0.1,
         },
         loop: true,
-        grabCursor: false,
         breakpoints: {
             640: {
                 slidesPerView: 2,
             },
-            768: {
+            980: {
                 slidesPerView: 3,
             },
         },
     });
 </script>
+{% endblock %}
+
 {% endblock %}

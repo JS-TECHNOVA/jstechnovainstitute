@@ -8,6 +8,15 @@
     {% block title %}
     <title>JS Technova Institute</title>
     {% endblock %}
+    <meta name="referrer" content="no-referrer-when-downgrade">
+    <meta name="theme-color" content="#0433fe">
+    <meta name="format-detection" content="telephone=no">
+    <meta property="og:title" content="JS Technova Institute">
+    <meta property="og:description"
+        content="JS Technova Institute offers expert one-on-one online tutoring for Class 1-10 students (ICSE, CBSE, UP Board).">
+    <meta property="og:image" content="{% static 'website/media/favicon.png' %}">
+    <meta property="og:url" content="https://institute.jstechnova.in">
+    <meta property="og:type" content="website">
     <link rel="stylesheet" href="{% static 'website/css/output.css' %}" />
     <link rel="stylesheet" href="{% static 'website/css/swiper.css' %}" />
     <script src="{% static 'website/js/swiper.js' %}"></script>
@@ -20,6 +29,7 @@
         content="JS Technova Institute offers expert one-on-one online tutoring for Class 1-10 students (ICSE, CBSE, UP Board). Flexible schedules, demo classes available with certified tutors. Book your free demo today!">
     <meta name="keywords"
         content="online tutoring, ICSE tutoring, CBSE tutoring, UP Board tutoring, Class 1 to 10 coaching, one-on-one online coaching, demo class, flexible schedule, expert tutors, js technova, best institute, best coaching, best tutoring site, js technova institute">
+    <meta name="author" content="JS Technova">
 
 </head>
 
@@ -55,5 +65,7 @@
 
 </body>
 <script src="{% static 'website/js/main.js' %}"></script>
+{% block script %}
+{% endblock %}
 
 </html>
