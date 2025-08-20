@@ -77,6 +77,7 @@ class TutorRegistrations(models.Model):
     email = models.EmailField()
     name = models.CharField(max_length=100)
     highest_qualification = models.CharField(max_length=50)
+    subject_applying_for = models.CharField(max_length=100, null=True, blank=True)
     languages_known = models.CharField(max_length=100)
     cv = models.FileField(upload_to=upload_tutor_cv)
 
